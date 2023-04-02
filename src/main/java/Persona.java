@@ -1,15 +1,15 @@
 public class Persona implements Comparable<Persona>{
     public String nombre;
     public String apellido;
-    public String telfono;
-    public String dirreccion;
+    public String telefono;
+    public String direccion;
     public String correo;
 
-    public Persona(String nombre, String apellido, String telfono, String dirreccion, String correo) {
+    public Persona(String nombre, String apellido, String telefono, String direccion, String correo) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.telfono = telfono;
-        this.dirreccion = dirreccion;
+        this.telefono = telefono;
+        this.direccion = direccion;
         this.correo = correo;
     }
 
@@ -29,20 +29,20 @@ public class Persona implements Comparable<Persona>{
         this.apellido = apellido;
     }
 
-    public String getTelfono() {
-        return telfono;
+    public String getTelefono() {
+        return telefono;
     }
 
-    public void setTelfono(String telfono) {
-        this.telfono = telfono;
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
-    public String getDirreccion() {
-        return dirreccion;
+    public String getDireccion() {
+        return direccion;
     }
 
-    public void setDirreccion(String dirreccion) {
-        this.dirreccion = dirreccion;
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
     }
 
     public String getCorreo() {
@@ -55,14 +55,16 @@ public class Persona implements Comparable<Persona>{
 
     @Override
     public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre+
-                ", apellido='" + apellido + '\'' +
-                '}';
+        return "NOMBRE: " + nombre + "\n" + "APELLIDO: " + apellido + "\n\n";
     }
 
     @Override
     public int compareTo(Persona o) {
-        return this.nombre.compareTo(o.getNombre());
+        if (this.nombre != o.getNombre()) {
+            return this.nombre.compareTo(o.getNombre());
+        }
+        else{
+            return this.apellido.compareTo(o.getApellido());
+        } 
     }
 }
