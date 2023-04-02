@@ -104,7 +104,7 @@ public class Lista_Contactos {
 
         Ordenar(contactos);
         //implementando funcion de imprimir indice de letra y contactos quitando formato de linkedlist
-        Imprimir(contactos);
+        System.out.println();
 
 //do while del menu
         int opcion = 0;
@@ -116,6 +116,8 @@ public class Lista_Contactos {
             System.out.println("4. Mostrar Contactos");
             System.out.println("5. Salir");
             opcion = sc.nextInt();
+            System.out.println();
+
             switch (opcion) {
                 case 1:
                     AgregarContacto(contactos);
@@ -141,6 +143,7 @@ public class Lista_Contactos {
 
     }
 
+
     public static void Ordenar(LinkedList<Persona> lista) {
         Collections.sort(lista);
     }
@@ -153,13 +156,13 @@ public class Lista_Contactos {
                 System.out.println((char)('A'+i));
                 for (int j = 0; j < lista.size(); j++) {
                     if (lista.get(j).getNombre().charAt(0) == (char)('A'+i)) {
-                        System.out.println(lista.get(j));
+                        System.out.print(lista.get(j));
                     }
                 }
 
             }
+        System.out.println();
             //funcion de agregar contactos
-
     }
 
     public static void AgregarContacto(LinkedList<Persona> lista){
@@ -201,7 +204,4 @@ public class Lista_Contactos {
             }
         }
     }
-
-
-
 }
