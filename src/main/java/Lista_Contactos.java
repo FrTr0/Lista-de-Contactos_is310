@@ -1,5 +1,10 @@
+import java.util.*;
+
+
 import java.util.Collections;
 import java.util.LinkedList;
+import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Lista_Contactos {
     public static void main(String[] args) {
@@ -173,15 +178,6 @@ public class Lista_Contactos {
         lista.add(p);
         Ordenar(lista);
     }
-
-    //impresion de Menu
-    public static void Menu(){
-        System.out.println("1. Agregar Contacto");
-        System.out.println("2. Buscar Contacto");
-        System.out.println("3. Eliminar Contacto");
-        System.out.println("4. Salir");
-    }
-
     public static void EliminarContacto(LinkedList<Persona> lista){
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese el nombre del contacto a eliminar");
